@@ -1,0 +1,9 @@
+<h2>Crear horario</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="date" name="fecha">
+    <input type="time" name="hora">
+    <button type="submit">Guardar</button>
+</form>
+<button onclick="history.back()">⬅ Volver</button>

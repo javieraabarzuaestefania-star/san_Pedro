@@ -1,0 +1,13 @@
+<h2>Horas disponibles</h2>
+
+{% for hora in horas %}
+    <p>
+        {{ hora.fecha }} - {{ hora.hora }}
+        <a href="{% url 'reservar_hora' hora.id %}">Reservar</a>
+    </p>
+{% empty %}
+    <p>No hay horas disponibles</p>
+{% endfor %}
+
+<br>
+<button onclick="history.back()">⬅ Volver</button>

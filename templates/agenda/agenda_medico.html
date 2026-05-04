@@ -1,0 +1,9 @@
+<h2>Agenda del médico</h2>
+
+{% for reserva in reservas %}
+    <p>
+        Paciente: {{ reserva.paciente }}
+        Fecha: {{ reserva.horario.fecha }}
+    </p>
+{% endfor %}
+<button onclick="history.back()">⬅ Volver</button>

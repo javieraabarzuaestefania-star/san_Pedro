@@ -1,0 +1,12 @@
+<h2>Reservas del paciente</h2>
+
+{% for r in reservas %}
+    <p>
+        {{ r.horario.fecha }} - {{ r.horario.hora }}
+    </p>
+{% empty %}
+    <p>Este paciente no tiene reservas</p>
+{% endfor %}
+
+<br>
+<button onclick="history.back()">⬅ Volver</button>

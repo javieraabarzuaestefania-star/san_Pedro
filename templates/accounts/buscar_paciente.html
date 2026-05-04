@@ -1,0 +1,14 @@
+<h2>Buscar paciente por RUT</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="rut" placeholder="Ingrese RUT" required>
+    <button type="submit">Buscar</button>
+</form>
+
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% endif %}
+
+<br>
+<button onclick="history.back()">⬅ Volver</button>

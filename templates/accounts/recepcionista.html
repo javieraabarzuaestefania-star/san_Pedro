@@ -1,9 +1,8 @@
-<h1>Recepcionista</h1>
+<h1>Panel Recepcionista</h1>
 
-<a href="">Buscar horas reservadas por rut de pacientes</a><br>
-<a href="">Buscar horas disponibles</a><br>
-<a href="">Reservar hora</a><br>
-<a href="">Anular hora</a><br>
-<a href="">Reprogramar hora</a><br>
+<a href="{% url 'ver_horas' %}">Ver horas disponibles</a><br>
+<a href="{% url 'buscar_paciente' %}">
+    <button>Buscar paciente por RUT</button>
+</a>
 
 <a href="{% url 'logout' %}">Cerrar sesión</a>

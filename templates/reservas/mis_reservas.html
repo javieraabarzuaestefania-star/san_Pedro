@@ -1,0 +1,23 @@
+<h2>Mis reservas</h2>
+
+{% for reserva in reservas %}
+    <p>
+        {{ reserva.horario.fecha }} - {{ reserva.horario.hora }}
+
+        <!-- Cancelar -->
+        <a href="{% url 'cancelar_reserva' reserva.id %}">
+            <button>Cancelar</button>
+        </a>
+
+        <!-- Reprogramar -->
+        <a href="{% url 'reprogramar_reserva' reserva.id %}">
+            <button>Reprogramar</button>
+        </a>
+
+    </p>
+{% empty %}
+    <p>No tienes reservas hasta el momento</p>
+{% endfor %}
+
+<br>
+<button onclick="history.back()">⬅ Volver</button>
